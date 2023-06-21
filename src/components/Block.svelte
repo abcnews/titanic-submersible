@@ -13,7 +13,7 @@
   $: pixelsPerMetre = $depthPixels / TITANIC;
 </script>
 
-<div style="grid-column: {colStart}/{colEnd}; grid-row:{Math.floor(ROWS_PER_METRE * depth)}">
+<div class="block" style="grid-column: {colStart}/{colEnd}; grid-row:{Math.floor(ROWS_PER_METRE * depth)}">
   {#if $depthPixels}
     {#each elements as child}
       {#if child instanceof HTMLElement}
@@ -24,3 +24,9 @@
     {/each}
   {/if}
 </div>
+
+<style>
+  .block {
+    position: relative;
+  }
+</style>

@@ -32,7 +32,6 @@
   style="--titanic-height: {SCREENS * 100}vh; --titanic-columns: {COLUMNS}; --titanic-column-width: {100 /
     COLUMNS}vw; --titanic-row-height: {100 / ROWS}vh;"
 >
-  <slot />
   <div
     class="depth-indicator"
     class:visible={depthInMetres >= 20}
@@ -41,6 +40,7 @@
   >
     <div>{Math.round(depthInMetres)} metres</div>
   </div>
+  <slot />
 </div>
 
 <style lang="scss">
@@ -51,17 +51,7 @@
     height: var(--titanic-height);
     background: linear-gradient(180deg, #648bd4 0%, #071b3d);
     position: relative;
-  }
-
-  .ocean-depths::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 200vh;
-    background: linear-gradient(90deg, #fff, #ccc, #fff, #ccc);
-    opacity: 0.2;
+    color: #fff;
   }
 
   .depth-indicator {

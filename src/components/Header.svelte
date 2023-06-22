@@ -20,7 +20,7 @@
 
   .boat {
     position: absolute;
-    bottom: 0px;
+    bottom: -10px;
     width: 100vw;
     transform-origin: center;
     animation: boat 7s ease-in-out infinite;

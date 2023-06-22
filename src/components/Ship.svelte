@@ -165,7 +165,7 @@
 <style>
   svg {
     display: block;
-    width: 300px;
+    width: 360px;
     margin: 0 auto;
   }
 </style>

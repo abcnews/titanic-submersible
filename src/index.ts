@@ -6,6 +6,7 @@ import url2cmid from '@abcnews/url2cmid';
 import { fetchOne, getImages } from '@abcnews/terminus-fetch';
 import type { Mount } from '@abcnews/mount-utils';
 import App from './components/App.svelte';
+import Header from './components/Header.svelte';
 
 const DECOY_KEY = 'ocean';
 const DEFAULT_IMAGE_RATIO = '3x2';
@@ -164,6 +165,16 @@ const parseDOM = async (el: Element) => {
 };
 
 Promise.all([proxy('titanic-submersible'), whenOdysseyLoaded]).then(async () => {
+  // Load the header graphic
+
+  const headerMounts = selectMounts('graphicheader') as unknown as (HTMLElement & Mount)[];
+  headerMounts.forEach(el => {
+    el.style.margin = '0';
+    new Header({ target: el });
+  });
+
+  // Load the main ocean section
+
   const instances = await requestDOMPermit(DECOY_KEY);
 
   if (instances === true) {

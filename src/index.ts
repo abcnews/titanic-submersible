@@ -170,6 +170,15 @@ Promise.all([proxy('titanic-submersible'), whenOdysseyLoaded]).then(async () => 
   const headerMounts = selectMounts('graphicheader') as unknown as (HTMLElement & Mount)[];
   headerMounts.forEach(el => {
     el.style.margin = '0';
+    el.style.position = 'absolute';
+    el.style.zIndex = '-1';
+    el.style.top = '0';
+    el.style.height = '100%';
+    el.style.width = '100%';
+    if (el.parentElement?.parentElement) {
+      el.parentElement.style.paddingBottom = '200px';
+      el.parentElement.parentElement.style.marginBottom = '0';
+    }
     new Header({ target: el });
   });
 

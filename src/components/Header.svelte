@@ -13,8 +13,9 @@
     background: radial-gradient(ellipse at bottom, #fffeea 0%, #fffeea 35%, #b7e8eb 100%);
     background-position: 0 50%;
     margin: 0;
-    height: 100vh;
-    position: relative;
+    position: absolute;
+    top: 0;
+    height: 100%;
   }
 
   .boat {
@@ -22,7 +23,7 @@
     bottom: 10px;
     width: 100vw;
     transform-origin: center;
-    animation: boat 7s ease-in-out infinite;
+    animation: boat 7s ease-in-out infinite, boat-swell 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
   }
 
   .wave {
@@ -41,6 +42,16 @@
     bottom: 0px;
     animation: wave 9s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;
     opacity: 1;
+  }
+
+  @keyframes boat-swell {
+    100%,
+    0% {
+      transform: translate(-2px, 4px);
+    }
+    50% {
+      transform: translate(2px, -4px);
+    }
   }
 
   @keyframes boat {

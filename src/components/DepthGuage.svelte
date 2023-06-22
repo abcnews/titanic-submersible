@@ -14,29 +14,36 @@
   class:bottom={depthInMetres >= TITANIC}
   style="--threshold: {(100 / ROWS) * 2}vh;"
 >
-  <div>{Math.round(depthInMetres)} metres</div>
-  <div class="pressure">{Math.round(pressureInAtmospheres)} atm</div>
+  <p>{Math.round(depthInMetres)} metres</p>
+  <p class="pressure">{Math.round(pressureInAtmospheres)} atm</p>
 </div>
 
 <style>
   .depth-indicator {
-    border-bottom: 2px solid #fff;
+    font-family: var(--dls-font-stack-sans);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
     text-align: right;
     position: fixed;
     bottom: var(--threshold);
     left: 0;
     width: 100vw;
     color: #fff;
-    font-size: clamp(1rem, 3vw, 2rem);
-    padding-right: 1rem;
+    font-size: 1rem;
+    padding: 0 15px;
     opacity: 0;
     transition: opacity 1s;
   }
 
-  .pressure {
-    position: absolute;
-    right: 0.5em;
-    top: 1.5em;
+  @media (min-width: 980px) {
+    .depth-indicator {
+      font-size: 1.5rem;
+    }
+  }
+
+  p {
+    position: relative;
+    top: 1.9em;
+    margin: 0.5em 0;
   }
 
   .visible {

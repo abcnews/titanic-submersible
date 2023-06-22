@@ -13,8 +13,8 @@ const DEFAULT_IMAGE_RATIO = '3x2';
 const DETAIL_IMAGE_RATIO = '16x9';
 
 export type Block = {
-  colStart: number;
-  colEnd: number;
+  width: 'max' | number | undefined;
+  align: 'top' | 'bottom';
   depth: number;
   elements: (HTMLElement | BlockImage)[];
 };
@@ -128,12 +128,10 @@ const parseDOM = async (el: Element) => {
           collector.blocks.push(collector.next);
         }
         const config = acto(child.getAttribute('id') || '');
-        const colStart = config.colstart ? +config.colstart : 1;
-        const colEnd = config.colend ? +config.colend : colStart + 1;
         collector.next = {
-          colStart,
-          colEnd,
+          width: typeof config.width === 'number' ? config.width : undefined,
           depth: config.depth ? +config.depth : 0,
+          align: config.align === 'bottom' ? 'bottom' : 'top',
           elements: []
         };
         return collector;
@@ -146,19 +144,16 @@ const parseDOM = async (el: Element) => {
         if (image !== null) {
           collector.next.elements.push(image);
         }
-
-        return collector;
       }
 
       // Otherwise, this is just content, so push it into the details.
-      if (child instanceof HTMLElement) collector.next?.elements.push(child);
+      if (child instanceof HTMLElement && !isImage(child)) collector.next?.elements.push(child);
 
       // Add the final card
       if (idx === arr.length - 1 && collector.next) {
         collector.blocks.push(collector.next);
         collector.next = undefined;
       }
-
       return collector;
     }, Promise.resolve({ blocks: [] }))
   ).blocks;

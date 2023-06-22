@@ -1,29 +1,44 @@
 <script lang="ts">
   import { depth as depthPixels } from '../lib/stores';
-  import { COLUMNS, ROWS_PER_METRE } from '../lib/constants';
+  import { COLUMNS, ROWS_PER_METRE, SCREENS, TITANIC } from '../lib/constants';
   import BlockImage from './BlockImage.svelte';
   import type { BlockImage as BlockImageType } from '../index';
 
-  export let colStart: number;
-  export let colEnd: number;
+  export let width: number | undefined;
+  export let align: 'bottom' | 'top';
   export let depth: number;
   export let elements: (HTMLElement | BlockImageType)[];
+
+  let position: string;
+  let deep = false;
+  $: deep = depth > 3000;
+  $: position =
+    align === 'top'
+      ? `top: calc(${(depth / TITANIC) * SCREENS} * 100vh)`
+      : `bottom: calc(${(1 - depth / TITANIC) * SCREENS} * 100vh)`;
 </script>
 
-<div class="block" style="grid-column: {colStart}/{colEnd}; grid-row:{Math.round(ROWS_PER_METRE * depth)}">
-  {#if $depthPixels}
-    {#each elements as child}
-      {#if child instanceof HTMLElement}
-        {@html child.outerHTML}
-      {:else}
-        <BlockImage sizes={`${(colEnd - colStart) * COLUMNS}vw`} {...child} />
-      {/if}
-    {/each}
-  {/if}
+<div class="block" class:deep={depth > 3000} style={position}>
+  <div class="u-layout u-richtext">
+    {#if $depthPixels}
+      {#each elements as child}
+        {#if child instanceof HTMLElement}
+          {@html child.outerHTML}
+        {:else}
+          <BlockImage {align} {width} sizes={`${100}vw`} {...child} />
+        {/if}
+      {/each}
+    {/if}
+  </div>
 </div>
 
 <style>
   .block {
-    position: relative;
+    position: absolute;
+    width: 100%;
+  }
+
+  .block > :global([class*='u-richtext'] > p) {
+    color: #fff;
   }
 </style>

@@ -20,80 +20,6 @@
   aria-hidden="true"
 >
   <defs>
-    <style>
-      .cls-gauge-1,
-      .cls-gauge-2,
-      .cls-gauge-3,
-      .cls-gauge-4,
-      .cls-gauge-5,
-      .cls-gauge-6 {
-        fill: none;
-      }
-
-      .cls-gauge-2 {
-        clip-path: url(#clippath-1);
-      }
-
-      .cls-gauge-7 {
-        letter-spacing: 0.02em;
-      }
-
-      .cls-gauge-3 {
-        stroke-dasharray: 0 0 2.14 14.15;
-      }
-
-      .cls-gauge-3,
-      .cls-gauge-8,
-      .cls-gauge-4,
-      .cls-gauge-9,
-      .cls-gauge-5 {
-        stroke-miterlimit: 10;
-      }
-
-      .cls-gauge-3,
-      .cls-gauge-4 {
-        stroke-width: 16.68px;
-      }
-
-      .cls-gauge-3,
-      .cls-gauge-4,
-      .cls-gauge-5 {
-        stroke: #000;
-      }
-
-      .cls-gauge-8 {
-        stroke: #595959;
-        stroke-width: 0.9px;
-      }
-
-      .cls-gauge-8,
-      .cls-gauge-9 {
-        fill: #dadada;
-      }
-
-      .cls-gauge-9 {
-        stroke: gray;
-        stroke-width: 1.31px;
-      }
-
-      .cls-gauge-10 {
-        letter-spacing: 0.02em;
-      }
-
-      .cls-gauge-5 {
-        stroke-width: 1.22px;
-      }
-
-      .cls-gauge-6 {
-        clip-path: url(#clippath);
-      }
-
-      .cls-gauge-11 {
-        font-family: var(--dls-font-stack-sans);
-        font-size: 34.71px;
-        font-weight: 800;
-      }
-    </style>
     <clipPath id="clippath">
       <path
         class="cls-gauge-1"
@@ -152,5 +78,70 @@
   }
   .needle {
     transform-origin: center center;
+  }
+
+  .cls-gauge-1,
+  .cls-gauge-2,
+  .cls-gauge-3,
+  .cls-gauge-4,
+  .cls-gauge-5,
+  .cls-gauge-6 {
+    fill: none;
+  }
+
+  .cls-gauge-2 {
+    clip-path: url(#clippath-1);
+  }
+
+  .cls-gauge-7 {
+    letter-spacing: 0.02em;
+  }
+
+  .cls-gauge-3 {
+    stroke-dasharray: 0 0 2.14 14.15;
+  }
+
+  .cls-gauge-3,
+  .cls-gauge-8,
+  .cls-gauge-4,
+  .cls-gauge-5 {
+    stroke-miterlimit: 10;
+  }
+
+  .cls-gauge-3,
+  .cls-gauge-4 {
+    stroke-width: 16.68px;
+  }
+
+  .cls-gauge-3,
+  .cls-gauge-4,
+  .cls-gauge-5 {
+    stroke: #000;
+  }
+
+  .cls-gauge-8 {
+    stroke: #595959;
+    stroke-width: 0.9px;
+  }
+
+  .cls-gauge-8 {
+    fill: #dadada;
+  }
+  .cls-gauge-10 {
+    letter-spacing: 0.02em;
+  }
+
+  .cls-gauge-5 {
+    stroke-width: 1.22px;
+  }
+
+  .cls-gauge-6 {
+    clip-path: url(#clippath);
+  }
+
+  .cls-gauge-11 {
+    font-family: var(--dls-font-stack-sans);
+    font-size: 34.71px;
+    font-weight: 800;
   }
 </style>

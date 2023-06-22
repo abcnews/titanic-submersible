@@ -8,53 +8,6 @@
 >
   <title id="ship-title">A ship bobbing on the ocean.</title>
   <defs>
-    <style>
-      .cls-1 {
-        stroke-width: 1.16px;
-      }
-
-      .cls-1,
-      .cls-2,
-      .cls-3,
-      .cls-4,
-      .cls-5 {
-        stroke-miterlimit: 10;
-      }
-
-      .cls-1,
-      .cls-4 {
-        fill: #dadada;
-        stroke: gray;
-      }
-
-      .cls-2 {
-        stroke-width: 1.17px;
-      }
-
-      .cls-2,
-      .cls-3,
-      .cls-5 {
-        stroke: #666;
-      }
-
-      .cls-2,
-      .cls-5 {
-        fill: #d6d6d6;
-      }
-
-      .cls-6 {
-        fill: #666;
-      }
-
-      .cls-3 {
-        fill: #999;
-      }
-
-      .cls-7 {
-        fill: none;
-        filter: url(#drop-shadow-5);
-      }
-    </style>
     <filter id="drop-shadow-5" filterUnits="userSpaceOnUse">
       <feOffset dx="1" dy="1" />
       <feGaussianBlur result="blur" stdDeviation="7.71" />
@@ -169,5 +122,50 @@
     display: block;
     width: 360px;
     margin: 0 auto;
+  }
+  .cls-1 {
+    stroke-width: 1.16px;
+  }
+
+  .cls-1,
+  .cls-2,
+  .cls-3,
+  .cls-4,
+  .cls-5 {
+    stroke-miterlimit: 10;
+  }
+
+  .cls-1,
+  .cls-4 {
+    fill: #dadada;
+    stroke: gray;
+  }
+
+  .cls-2 {
+    stroke-width: 1.17px;
+  }
+
+  .cls-2,
+  .cls-3,
+  .cls-5 {
+    stroke: #666;
+  }
+
+  .cls-2,
+  .cls-5 {
+    fill: #d6d6d6;
+  }
+
+  .cls-6 {
+    fill: #666;
+  }
+
+  .cls-3 {
+    fill: #999;
+  }
+
+  .cls-7 {
+    fill: none;
+    filter: url(#drop-shadow-5);
   }
 </style>

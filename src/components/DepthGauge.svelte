@@ -2,7 +2,7 @@
   import { ROWS, TITANIC } from '../lib/constants';
 
   export let depthInMetres: number;
-
+  const formatter = new Intl.NumberFormat();
   let pressureInAtmospheres: number;
 
   $: pressureInAtmospheres = depthInMetres / 10;
@@ -10,8 +10,10 @@
 
 <div class="depth-indicator" style="--threshold: {(100 / ROWS) * 2}vh;">
   <div class="label">PRESSURE</div>
-  <div class="pressure"><span class="number">{Math.round(pressureInAtmospheres)}</span> atmospheres</div>
-  <div><span class="number">{Math.round(depthInMetres)}</span> metres</div>
+  <div class="pressure">
+    <span class="number">{formatter.format(Math.round(pressureInAtmospheres))}</span> atmospheres
+  </div>
+  <div><span class="number">{formatter.format(Math.round(depthInMetres))}</span> metres deep</div>
 </div>
 
 <style>
@@ -29,6 +31,7 @@
     line-height: 1.5;
   }
   .label {
+    margin-bottom: -5px;
     font-size: 1em;
     font-weight: bolder;
   }

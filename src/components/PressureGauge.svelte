@@ -17,6 +17,7 @@
   viewBox="0 0 316.05 316.05"
   class:visible={pressure > 10}
   class:bottom={pressure >= TITANIC / 10}
+  aria-hidden="true"
 >
   <defs>
     <style>

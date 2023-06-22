@@ -4,8 +4,8 @@
 
 <div class="u-full header">
   <div class="boat"><Ship /></div>
-  <div class="wave" />
-  <div class="wave" />
+  <div class="wave" aria-hidden="true" />
+  <div class="wave" aria-hidden="true" />
 </div>
 
 <style>

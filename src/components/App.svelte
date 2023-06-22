@@ -1,9 +1,7 @@
 <script lang="ts">
   import Block from './Block.svelte';
   import OceanGrid from './OceanGrid.svelte';
-
   export let blocks: import('..').Block[];
-  console.log('blocks :>> ', blocks);
 </script>
 
 <OceanGrid>

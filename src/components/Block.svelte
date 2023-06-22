@@ -4,7 +4,7 @@
   import BlockImage from './BlockImage.svelte';
   import type { BlockImage as BlockImageType } from '../index';
 
-  export let width: number | undefined;
+  export let width: number | 'max' | undefined;
   export let align: 'bottom' | 'top';
   export let depth: number;
   export let elements: (HTMLElement | BlockImageType)[];

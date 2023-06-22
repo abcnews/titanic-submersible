@@ -4,6 +4,7 @@
   import { TITANIC, SCREENS, ROWS, COLUMNS } from '../lib/constants';
   import { getReadableStore } from '@abcnews/progress-utils';
   import DepthGuage from './DepthGuage.svelte';
+  import PressureGuage from './PressureGuage.svelte';
 
   let ocean: HTMLDivElement;
   let scroll: ReturnType<typeof getReadableStore>;
@@ -34,6 +35,7 @@
     COLUMNS}vw; --titanic-row-height: {100 / ROWS}vh;"
 >
   <DepthGuage {depthInMetres} />
+  <PressureGuage pressure={depthInMetres / 10} />
   <slot />
 </div>
 

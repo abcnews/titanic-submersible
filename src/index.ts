@@ -129,7 +129,7 @@ const parseDOM = async (el: Element) => {
         }
         const config = acto(child.getAttribute('id') || '');
         collector.next = {
-          width: typeof config.width === 'number' ? config.width : undefined,
+          width: typeof config.width === 'number' || config.width === 'max' ? config.width : undefined,
           depth: config.depth ? +config.depth : 0,
           align: config.align === 'bottom' ? 'bottom' : 'top',
           elements: []

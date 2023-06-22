@@ -3,8 +3,7 @@
   import { depth } from '../lib/stores';
   import { TITANIC, SCREENS, ROWS, COLUMNS } from '../lib/constants';
   import { getReadableStore } from '@abcnews/progress-utils';
-  import DepthGuage from './DepthGuage.svelte';
-  import PressureGuage from './PressureGuage.svelte';
+  import Gauge from './Gauge.svelte';
 
   let ocean: HTMLDivElement;
   let scroll: ReturnType<typeof getReadableStore>;
@@ -34,9 +33,8 @@
   style="--titanic-height: {SCREENS * 100}vh; --titanic-columns: {COLUMNS}; --titanic-column-width: {100 /
     COLUMNS}vw; --titanic-row-height: {100 / ROWS}vh;"
 >
-  <DepthGuage {depthInMetres} />
-  <PressureGuage pressure={depthInMetres / 10} />
   <slot />
+  <Gauge {depthInMetres} />
 </div>
 
 <style lang="scss">

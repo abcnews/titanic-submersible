@@ -14,7 +14,7 @@
   data-name="Layer 1"
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink"
-  viewBox="0 0 316.05 345.29"
+  viewBox="0 0 316.05 316.05"
   class:visible={pressure > 10}
   class:bottom={pressure >= TITANIC / 10}
 >
@@ -103,10 +103,6 @@
       <rect class="cls-guage-1" x="31.72" y="25.6" width="259.07" height="209.46" />
     </clipPath>
   </defs>
-  <path
-    class="cls-guage-9"
-    d="m201.4,323.05c-11.99-29.82-3.59-55.44-.1-63.83.58-1.39-.44-2.9-1.94-2.9h-71.13c-1.46,0-2.48,1.46-1.97,2.83,11.41,30.77,3.52,55.87.18,64.13-.56,1.39.46,2.89,1.96,2.89l71.06-.23c1.49,0,2.49-1.51,1.94-2.89Z"
-  />
   <circle class="cls-guage-8" cx="161.26" cy="157.21" r="140.5" />
   <g>
     <g class="cls-guage-6">
@@ -124,7 +120,7 @@
       d="m93,212.05c-12.87-15.42-20.61-35.26-20.61-56.92,0-49.08,39.79-88.87,88.87-88.87s88.87,39.79,88.87,88.87c0,21.2-7.42,40.67-19.82,55.95l32.27,22.73c16.89-21.73,26.95-49.03,26.95-78.68,0-70.85-57.44-128.29-128.29-128.29S32.97,84.29,32.97,155.14c0,29.65,10.06,56.95,26.95,78.67l33.07-21.76Z"
     />
   </g>
-  <g style={`transform: rotate(${rotation}deg); transform-origin: center 47%;`}>
+  <g class="needle" style={`transform: rotate(${rotation}deg);`}>
     <polygon points="161.18 57.56 169.04 159.22 153.48 159.33 159.83 57.57 161.18 57.56 161.18 57.56" />
     <circle cx="161.26" cy="157.21" r="11.99" />
   </g>
@@ -147,17 +143,13 @@
 
 <style>
   svg {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    width: 80px;
-    opacity: 0;
-  }
-  .visible {
-    opacity: 1;
-  }
-  .bottom {
     position: absolute;
-    bottom: 0;
+    left: calc(50% - 100px);
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+  }
+  .needle {
+    transform-origin: center center;
   }
 </style>

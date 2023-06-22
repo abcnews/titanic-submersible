@@ -16,7 +16,8 @@
   {sizes}
   srcset={renditions.map(d => `${d.url} ${d.width}w`).join(',')}
   src={url}
-  style={width === 'max' ? `width: 100%` : `width: clamp(200px, ${width}vw, 400px);`}
+  style={width === 'max' ? `width: 100vw` : `width: clamp(200px, ${width}%, 100%);`}
+  class:u-full={width === 'max'}
   class:bottom={align === 'bottom'}
 />
 
@@ -27,5 +28,8 @@
   }
   .bottom {
     margin: 1em auto 0 auto;
+  }
+  .u-full {
+    max-width: none;
   }
 </style>

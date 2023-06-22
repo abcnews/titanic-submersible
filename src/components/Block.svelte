@@ -18,8 +18,8 @@
       : `bottom: calc(${(1 - depth / TITANIC) * SCREENS} * 100vh)`;
 </script>
 
-<div class="block" class:deep={depth > 3000} style={position}>
-  <div class="u-layout u-richtext">
+<div class="block u-layout" class:deep={depth > 3000} style={position}>
+  <div class=" u-richtext">
     {#if $depthPixels}
       {#each elements as child}
         {#if child instanceof HTMLElement}
@@ -35,7 +35,8 @@
 <style>
   .block {
     position: absolute;
-    width: 100%;
+    left: 50%;
+    transform: translate(-50%);
   }
 
   .block > :global([class*='u-richtext'] > p) {

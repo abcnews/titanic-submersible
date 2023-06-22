@@ -21,74 +21,74 @@
 >
   <defs>
     <style>
-      .cls-guage-1,
-      .cls-guage-2,
-      .cls-guage-3,
-      .cls-guage-4,
-      .cls-guage-5,
-      .cls-guage-6 {
+      .cls-gauge-1,
+      .cls-gauge-2,
+      .cls-gauge-3,
+      .cls-gauge-4,
+      .cls-gauge-5,
+      .cls-gauge-6 {
         fill: none;
       }
 
-      .cls-guage-2 {
+      .cls-gauge-2 {
         clip-path: url(#clippath-1);
       }
 
-      .cls-guage-7 {
+      .cls-gauge-7 {
         letter-spacing: 0.02em;
       }
 
-      .cls-guage-3 {
+      .cls-gauge-3 {
         stroke-dasharray: 0 0 2.14 14.15;
       }
 
-      .cls-guage-3,
-      .cls-guage-8,
-      .cls-guage-4,
-      .cls-guage-9,
-      .cls-guage-5 {
+      .cls-gauge-3,
+      .cls-gauge-8,
+      .cls-gauge-4,
+      .cls-gauge-9,
+      .cls-gauge-5 {
         stroke-miterlimit: 10;
       }
 
-      .cls-guage-3,
-      .cls-guage-4 {
+      .cls-gauge-3,
+      .cls-gauge-4 {
         stroke-width: 16.68px;
       }
 
-      .cls-guage-3,
-      .cls-guage-4,
-      .cls-guage-5 {
+      .cls-gauge-3,
+      .cls-gauge-4,
+      .cls-gauge-5 {
         stroke: #000;
       }
 
-      .cls-guage-8 {
+      .cls-gauge-8 {
         stroke: #595959;
         stroke-width: 0.9px;
       }
 
-      .cls-guage-8,
-      .cls-guage-9 {
+      .cls-gauge-8,
+      .cls-gauge-9 {
         fill: #dadada;
       }
 
-      .cls-guage-9 {
+      .cls-gauge-9 {
         stroke: gray;
         stroke-width: 1.31px;
       }
 
-      .cls-guage-10 {
+      .cls-gauge-10 {
         letter-spacing: 0.02em;
       }
 
-      .cls-guage-5 {
+      .cls-gauge-5 {
         stroke-width: 1.22px;
       }
 
-      .cls-guage-6 {
+      .cls-gauge-6 {
         clip-path: url(#clippath);
       }
 
-      .cls-guage-11 {
+      .cls-gauge-11 {
         font-family: var(--dls-font-stack-sans);
         font-size: 34.71px;
         font-weight: 800;
@@ -96,18 +96,18 @@
     </style>
     <clipPath id="clippath">
       <path
-        class="cls-guage-1"
+        class="cls-gauge-1"
         d="m93,212.05c-12.87-15.42-20.61-35.26-20.61-56.92,0-49.08,39.79-88.87,88.87-88.87s88.87,39.79,88.87,88.87c0,21.2-7.42,40.67-19.82,55.95l32.27,22.73c16.89-21.73,26.95-49.03,26.95-78.68,0-70.85-57.44-128.29-128.29-128.29S32.97,84.29,32.97,155.14c0,29.65,10.06,56.95,26.95,78.67l33.07-21.76Z"
       />
     </clipPath>
     <clipPath id="clippath-1">
-      <rect class="cls-guage-1" x="31.72" y="25.6" width="259.07" height="209.46" />
+      <rect class="cls-gauge-1" x="31.72" y="25.6" width="259.07" height="209.46" />
     </clipPath>
   </defs>
-  <circle class="cls-guage-8" cx="161.26" cy="157.21" r="140.5" />
+  <circle class="cls-gauge-8" cx="161.26" cy="157.21" r="140.5" />
   <g>
-    <g class="cls-guage-6">
-      <g class="cls-guage-2">
+    <g class="cls-gauge-6">
+      <g class="cls-gauge-2">
         <image
           width="541"
           height="437"
@@ -117,7 +117,7 @@
       </g>
     </g>
     <path
-      class="cls-guage-5"
+      class="cls-gauge-5"
       d="m93,212.05c-12.87-15.42-20.61-35.26-20.61-56.92,0-49.08,39.79-88.87,88.87-88.87s88.87,39.79,88.87,88.87c0,21.2-7.42,40.67-19.82,55.95l32.27,22.73c16.89-21.73,26.95-49.03,26.95-78.68,0-70.85-57.44-128.29-128.29-128.29S32.97,84.29,32.97,155.14c0,29.65,10.06,56.95,26.95,78.67l33.07-21.76Z"
     />
   </g>
@@ -126,16 +126,16 @@
     <circle cx="161.26" cy="157.21" r="11.99" />
   </g>
   <g>
-    <path class="cls-guage-4" d="m84.51,218.18c-.12-.22-.34-.52-.6-.87" />
+    <path class="cls-gauge-4" d="m84.51,218.18c-.12-.22-.34-.52-.6-.87" />
     <path
-      class="cls-guage-3"
+      class="cls-gauge-3"
       d="m76.9,205.05c-22.56-45.03-16.91-74.44,3.74-104.9,19.09-28.15,52.89-41.38,75.47-42.25,25.46-.98,60.26,9.34,77.63,31.93,21.6,28.08,39.52,72.45,7.79,119.62"
     />
-    <path class="cls-guage-4" d="m237.41,215.22c-.21.28-.42.56-.64.84" />
+    <path class="cls-gauge-4" d="m237.41,215.22c-.21.28-.42.56-.64.84" />
   </g>
-  <text class="cls-guage-11" transform="translate(82.76 252.45)"><tspan x="0" y="0">0</tspan></text>
-  <text class="cls-guage-11" transform="translate(186.46 252.48)"
-    ><tspan class="cls-guage-10" x="0" y="0">4</tspan><tspan class="cls-guage-7" x="20.58" y="0">0</tspan><tspan
+  <text class="cls-gauge-11" transform="translate(82.76 252.45)"><tspan x="0" y="0">0</tspan></text>
+  <text class="cls-gauge-11" transform="translate(186.46 252.48)"
+    ><tspan class="cls-gauge-10" x="0" y="0">4</tspan><tspan class="cls-gauge-7" x="20.58" y="0">0</tspan><tspan
       x="41.23"
       y="0">0</tspan
     ></text

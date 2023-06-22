@@ -14,7 +14,7 @@
   $: deep = depth > 3000;
   $: position =
     align === 'top'
-      ? `top: calc(${(depth / TITANIC) * SCREENS} * 100vh)`
+      ? `top: calc(${(depth / TITANIC) * SCREENS} * 100vh - 70vh)`
       : `bottom: calc(${(1 - depth / TITANIC) * SCREENS} * 100vh)`;
 </script>
 

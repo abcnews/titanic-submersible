@@ -9,17 +9,18 @@
 </script>
 
 <div class="depth-indicator" style="--threshold: {(100 / ROWS) * 2}vh;">
-  <div class="pressure">{Math.round(pressureInAtmospheres)} atmosphers</div>
-  <div>{Math.round(depthInMetres)} metres</div>
+  <div class="label">PRESSURE</div>
+  <div class="pressure"><span class="number">{Math.round(pressureInAtmospheres)}</span> atmospheres</div>
+  <div><span class="number">{Math.round(depthInMetres)}</span> metres</div>
 </div>
 
 <style>
   .depth-indicator {
     color: #000000;
     background-color: #dadada;
-    width: 240px;
+    width: 250px;
     position: absolute;
-    left: calc(50% + 40px);
+    left: calc(50% + 34px);
     top: 50%;
     transform: translate(-50%, -50%);
     padding: 0.5em 0.5em 0.5em 50px;
@@ -27,8 +28,15 @@
     font-weight: bold;
     line-height: 1.5;
   }
-
+  .label {
+    font-size: 1em;
+    font-weight: bolder;
+  }
   .pressure {
     font-size: 1.5em;
+  }
+
+  .number {
+    font-family: var(--dls-font-stack-monospace);
   }
 </style>

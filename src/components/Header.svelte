@@ -67,13 +67,13 @@
       transform: rotate(-3deg) translate(-5px, 4px);
     }
     30% {
-      transform: rotate(0deg) translate(0px, -4px);
+      transform: rotate(3deg) translate(0px, -4px);
     }
     50% {
-      transform: rotate(3deg) translate(5px, 0px);
+      transform: rotate(-3deg) translate(5px, 0px);
     }
     70% {
-      transform: rotate(0deg) translate(0px, -4px);
+      transform: rotate(3deg) translate(0px, -4px);
     }
   }
 

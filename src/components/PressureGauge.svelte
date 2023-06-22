@@ -144,7 +144,7 @@
 <style>
   svg {
     position: absolute;
-    left: calc(50% - 100px);
+    left: calc(50% - 105px);
     top: 50%;
     transform: translate(-50%, -50%);
     width: 120px;

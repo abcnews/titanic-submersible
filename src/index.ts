@@ -83,7 +83,7 @@ const isImage = (el: unknown): el is HTMLElement =>
 const parseImage = async (el: HTMLElement, defaultImageRatio: string) => {
   const img = el.querySelector('img');
   const caption = el.querySelector('figcaption');
-  const id = caption?.getAttribute('id');
+  const id = caption?.getAttribute('id') || el.dataset?.uri?.replace('coremedia://image/', '');
   const alt = img?.getAttribute('alt');
   const url = img?.dataset.src || img?.getAttribute('src');
   if (typeof id === 'undefined' || id === null || typeof alt !== 'string' || typeof url !== 'string') {

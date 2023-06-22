@@ -27,7 +27,7 @@
     left: 0;
     width: 100vw;
     color: #fff;
-    font-size: 2rem;
+    font-size: clamp(1rem, 3vw, 2rem);
     padding-right: 1rem;
     opacity: 0;
     transition: opacity 1s;

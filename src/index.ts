@@ -29,7 +29,7 @@ type BlockImageRendition = {
   ratio: string;
 };
 
-type BlockImage = {
+export type BlockImage = {
   alt: string;
   url: string;
   renditions: BlockImageRendition[];
@@ -45,7 +45,7 @@ const getEmbeddedImageData = async (id: string) => {
 
   return media.reduce<TerminusImageData>((images, embed: any) => {
     try {
-      const widths = [480, 240, 120];
+      const widths = [1800, 1200, 480, 240, 120];
       const imageData = getImages(embed, widths);
       const alt = imageData.alt || imageData.title || '';
       const id = imageData.cmid;

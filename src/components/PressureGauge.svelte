@@ -89,7 +89,7 @@
       }
 
       .cls-guage-11 {
-        font-family: ABCSansNova-Black, 'ABC Sans Nova';
+        font-family: var(--dls-font-stack-sans);
         font-size: 34.71px;
         font-weight: 800;
       }

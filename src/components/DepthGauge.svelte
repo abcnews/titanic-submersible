@@ -36,7 +36,7 @@
     font-weight: bolder;
   }
   .pressure {
-    font-size: 1.5em;
+    font-size: 1.4em;
   }
 
   .number {

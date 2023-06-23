@@ -7,5 +7,3 @@ export const COLUMNS = 10;
 export const ROWS = 10;
 export const ROWS_PER_METRE = (SCREENS * ROWS) / TITANIC;
 export const METRES_PER_ROW = TITANIC / (SCREENS * ROWS);
-
-console.log('SCREENS :>> ', SCREENS);

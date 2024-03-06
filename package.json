@@ -17,7 +17,7 @@
 	},
 	"devDependencies": {
 		"@abcnews/aunty": "^15.0.3",
-		"@testing-library/svelte": "^3.2.2",
+		"@testing-library/svelte": "^4.1.0",
 		"@types/jest": "^29.5.2",
 		"@types/webpack-env": "^1.18.1"
 	},
@@ -30,6 +30,6 @@
 		"@abcnews/terminus-fetch": "^6.0.0",
 		"@abcnews/url2cmid": "^1.1.1",
 		"d3-scale": "^4.0.2",
-		"svelte": "^3.59.1"
+		"svelte": "^4.2.12"
 	}
 }

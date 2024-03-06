@@ -172,6 +172,7 @@ Promise.all([proxy('titanic-submersible'), whenOdysseyLoaded]).then(async () => 
     el.style.width = '100%';
     if (el.parentElement?.parentElement) {
       el.parentElement.style.paddingBottom = '200px';
+      el.parentElement.style.zIndex = '0';
       el.parentElement.parentElement.style.marginBottom = '0';
     }
     new Header({ target: el });
